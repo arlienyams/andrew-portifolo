@@ -1,29 +1,16 @@
 <?php get_header(); ?>
 
-<div class="section intro">
-    <div class="container">
-        <div class="title-name">
-            <h1>Hi, I'm Andrew</h1>
-        </div>
-        <div class="role">
-            <h4>UX/UI Designer</h4>
-        </div>
-        <div class="role-description">
-            <p>Harare-based designer, with experience in delivering end-to-end UX/UI design. I'm passionate about improving digital products and helping businesses expand their capacity for impact.</p>
-        </div>
-        <div class="check-latest">
-            <p>Please check some of my latest projects.</p>
-        </div>
-    </div>
-</div>
 
 <section class="projects">
     <div class="container">
         <?php
+
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $args = array(
             'post_type' => 'projects',
             'orderby' => 'menu_order',
-            'posts_per_page' => 3
+            'posts_per_page' => 2,
+            'paged' => $paged
         );
         $project = new WP_Query($args);
         ?>
@@ -54,11 +41,15 @@
 
         <?php endif; ?>
 
+        <div class="page">
+            <?php if (function_exists("pagination")) {
+                pagination($project->max_num_pages);
+            } ?>
+        </div>
+
+
     </div>
 
 </section>
-
-
-
 
 <?php get_footer(); ?>

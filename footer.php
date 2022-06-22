@@ -6,9 +6,9 @@
              <div class="footer-social">
                  <?php
                     $args = array(
-                        'post_type' => 'projects',
+                        'post_type' => 'social',
                         'orderby' => 'menu_order',
-                        'posts_per_page' => -3
+                        'posts_per_page' => -1
                     );
                     $project = new WP_Query($args);
                     ?>
@@ -17,22 +17,9 @@
 
                      <?php while ($project->have_posts()) : $project->the_post(); ?>
 
-                         <div class="project-wrapper">
-                             <div class="row">
-                                 <div class="col-md-6">
-                                     <h2><?php the_field("project_title"); ?></h2>
-                                     <p><?php the_field("project_description"); ?></p>
-                                     <div class="btn">
-                                         <a href="<?php the_permalink(); ?>">View Case Study</a>
-                                     </div>
-                                 </div>
-                                 <div class="col-md-6">
-                                     <div class="project-image">
-                                         <?php the_post_thumbnail(); ?>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
+                         <a href="<?php the_field("linked_in"); ?>"><i class="icon-iconmonstr-linkedin-2-2"></i></a>
+                         <a href="<?php the_field("behance"); ?>"><i class="icon-iconmonstr-behance-2-2"></i></a>
+                         <a href="<?php the_field("dribble"); ?>"><i class="icon-iconmonstr-dribbble-2-2"></i></a>
 
                      <?php endwhile; ?>
                      <?php wp_reset_postdata(); ?>
