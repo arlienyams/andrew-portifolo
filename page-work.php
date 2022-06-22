@@ -9,7 +9,7 @@
         $args = array(
             'post_type' => 'projects',
             'orderby' => 'menu_order',
-            'posts_per_page' => 2,
+            'posts_per_page' => 5,
             'paged' => $paged
         );
         $project = new WP_Query($args);
@@ -21,6 +21,7 @@
 
                 <div class="project-wrapper">
                     <div class="row">
+
                         <div class="col-md-6">
                             <h2><?php the_field("project_title"); ?></h2>
                             <p><?php the_field("project_description"); ?></p>

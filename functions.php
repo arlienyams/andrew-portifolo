@@ -239,40 +239,39 @@ function social_post_type()
 add_action('init', 'social_post_type');
 
 
+
 /************************************
-	Menu Post Type
+	About Post Type
  ************************************/
-function menu_post_type()
+function about_post_type()
 {
     register_post_type(
-        'menu',
+        'about',
         array(
             'labels' => array(
-                'name' => __('Menu'),
-                'singular_name' => __('Menu'),
-                'add_new_item' => 'Add Menu Item',
-                'add_new' => __('Add Menu Item'),
-                'attributes' => __('Menu Attributes', 'text_domain'),
-
+                'name' => __('About Me'),
+                'singular_name' => __('About'),
+                'add_new_item' => 'Add About Me',
+                'add_new' => __('Add About Me'),
+                'attributes' => __('About Attributes', 'text_domain'),
             ),
-            'taxonomies'  => array('category'),
             'public' => true,
             'has_archive' => true,
             'rewrite' => array(
-                'slug' => 'menu'
+                'slug' => 'about'
             ),
             'supports' => array(
                 'title',
                 'thumbnail'
             ),
             'menu_position' => 8,
-            'menu_icon' => __('dashicons-carrot')
+            'menu_icon' => __('dashicons-businessperson')
         )
-
-
     );
 }
-add_action('init', 'menu_post_type');
+add_action('init', 'about_post_type');
+
+
 
 /************************************
 	Contact Post Type

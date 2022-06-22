@@ -80,6 +80,12 @@
 .icon-iconmonstr-dribbble-2-2:before {
   content: "\e804";
 } /* '' */
+.icon-right-big:before {
+  content: "\e805";
+} /* '' */
+.icon-iconmonstr-arrow-right-thin-icon:before {
+  content: "\e806";
+} /* '' */
 
 /* '' */
 
@@ -156,6 +162,12 @@ h4 {
   font-size: 1.5em;
   font-weight: 700;
   color: var(--the-primary);
+}
+
+h5 {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 ul {
@@ -247,11 +259,48 @@ img {
   padding: 60px 0;
 }
 
+.project-wrapper:last-child {
+  border-bottom: none;
+}
+
 .project-wrapper p {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+}
+
+/* About Me */
+
+.about-name h2 {
+  margin-bottom: 10px;
+}
+
+.about-me {
+  margin-top: 40px;
+}
+
+.about-btns {
+  margin-top: 60px;
+}
+
+.about-btns .btn {
+  width: 100%;
+}
+
+.about-btns .btn a {
+  width: 100%;
+  font-size: 2.5em;
+  text-align: left;
+  padding: 20px 50px;
+}
+
+.about-btns .btn a::after {
+  content: "\e806";
+  position: absolute;
+  top: 22px;
+  font-family: acicons;
+  right: 65px;
 }
 
 /* Buttons */
@@ -280,22 +329,31 @@ img {
 .footer-wrapper {
   padding: 40px 0;
   text-align: center;
+  border-top: 1px solid var(--the-primary);
+  margin-top: 80px;
 }
-
 .footer-social a {
   color: var(--the-primary);
   font-size: 1.5em;
+}
+
+.home .footer-wrapper {
+  border: none;
+  margin-top: 0;
+}
+
+.project-wrapper:last-child {
+  border-bottom: none !important;
 }
 
 /*PAGINATION*/
 
 .pagination {
   clear: both;
-  padding: 0px 0 50px 0;
   position: relative;
   font-size: 1.2em;
   line-height: 13px;
-  float: right;
+  margin-top: 10px;
 }
 
 .pagination a,
