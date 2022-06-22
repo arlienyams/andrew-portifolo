@@ -141,7 +141,7 @@ h1 {
 h2 {
   font-size: 3em;
   font-weight: 700;
-  color: var(--the-primary);
+  color: var(--the-blue);
   margin-bottom: 40px;
   word-wrap: anywhere;
   animation: slideInDown;
@@ -242,6 +242,11 @@ img {
 
 /* Projects */
 
+.project-wrapper {
+  border-bottom: 1px solid var(--the-primary);
+  padding: 60px 0;
+}
+
 .project-wrapper p {
   overflow: hidden;
   display: -webkit-box;
@@ -260,6 +265,7 @@ img {
   padding: 20px;
   color: var(--the-primary);
   transition: 300ms ease-in-out;
+  display: inline-block;
 }
 
 .btn a:hover {

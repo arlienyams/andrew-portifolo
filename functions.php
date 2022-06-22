@@ -180,35 +180,35 @@ function projects_post_type()
 add_action('init', 'projects_post_type');
 
 /************************************
-	Staff Post Type
+	Social Post Type
  ************************************/
-function our_people_post_type()
+function social_post_type()
 {
     register_post_type(
-        'our-people',
+        'social',
         array(
             'labels' => array(
-                'name' => __('Staff'),
-                'singular_name' => __('Staff'),
-                'add_new_item' => 'Add Staff Member',
-                'add_new' => __('Add Staff Member'),
-                'attributes' => __('Staff Member Attributes', 'text_domain'),
+                'name' => __('Social Links'),
+                'singular_name' => __('Social Links'),
+                'add_new_item' => 'Add Social Links',
+                'add_new' => __('Add Social Links'),
+                'attributes' => __('Social Links Attributes', 'text_domain'),
             ),
             'public' => true,
             'has_archive' => true,
             'rewrite' => array(
-                'slug' => 'our-people'
+                'slug' => 'social'
             ),
             'supports' => array(
                 'title',
                 'thumbnail'
             ),
             'menu_position' => 7,
-            'menu_icon' => __('dashicons-businessperson')
+            'menu_icon' => __('dashicons-share')
         )
     );
 }
-add_action('init', 'our_people_post_type');
+add_action('init', 'social_post_type');
 
 
 /************************************

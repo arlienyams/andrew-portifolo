@@ -42,7 +42,9 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <p>hello you</p>
+                            <div class="project-image">
+                                <?php the_post_thumbnail(); ?>
+                            </div>
                         </div>
                     </div>
                 </div>
