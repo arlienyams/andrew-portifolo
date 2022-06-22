@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="menu-wrapper">
                     <div class="the-logo">
-                        <a href="<?php echo home_url() ?>" class="logo float-left"><img src="<?php bloginfo('template_directory'); ?>/" alt="A." width="120px"></a>
+                        <a href="<?php echo home_url() ?>" class="logo float-left"><img src="<?php bloginfo('template_directory'); ?>/img/A-Logo.svg" alt="A." width="120px"></a>
                     </div>
 
 

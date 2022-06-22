@@ -65,7 +65,7 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.icon-iconmonstr-email-1-(2)-1:before {
+.icon-iconmonstr-email-1-2-1:before {
   content: "\e800";
 } /* '' */
 .icon-iconmonstr-linkedin-2-2:before {
@@ -103,8 +103,8 @@ html {
 body {
   min-height: 100%;
   overflow-x: hidden;
+  background: var(--the-whitish);
 }
-
 @media (min-width: 1200px) {
   .nf-form-cont {
     width: 540px;
@@ -301,6 +301,50 @@ img {
   top: 22px;
   font-family: acicons;
   right: 65px;
+}
+
+/* Contact */
+
+.wpcf7-form-control.wpcf7-textarea,
+.wpcf7-form-control.wpcf7-text,
+.wpcf7-form-control.wpcf7-text.wpcf7-email {
+  width: 100%;
+  border: 2px solid var(--the-blue);
+  padding: 15px;
+  margin-bottom: 40px;
+  background: transparent;
+}
+
+.wpcf7-form-control.has-spinner.wpcf7-submit {
+  background: none;
+  padding: 15px 40px;
+  border: 1px solid var(--the-primary);
+  color: var(--the-primary);
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+
+.wpcf7-form-control.has-spinner.wpcf7-submit:hover {
+  background: var(--the-primary);
+  color: var(--the-whitish);
+}
+
+.contact-details {
+  background: var(--the-white);
+  text-align: center;
+  padding: 60px 0;
+  margin-bottom: 40px;
+}
+
+.contact-details i {
+  font-size: 2.5em;
+  background: var(--the-whitish);
+  padding: 20px 15px;
+  border-radius: 50%;
+}
+
+.contact-details p {
+  padding: 20px;
 }
 
 /* Buttons */
